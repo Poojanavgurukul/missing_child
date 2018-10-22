@@ -4,8 +4,8 @@ import { Redirect } from "react-router";
 
 
 class Login extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       emailid: "",
       password: "",

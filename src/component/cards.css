@@ -1,0 +1,24 @@
+.card-body{
+    margin-left: 20px;
+}
+.card-img-top{
+    width: 80px;
+    height:80px;
+    margin-left: 15px;
+}
+.card{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin:5px;
+    box-shadow:inset 0 0 10px #000000;
+}
+.boxes{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    margin-top: 40px;
+}
+.boxes1:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
