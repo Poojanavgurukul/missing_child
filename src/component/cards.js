@@ -1,115 +1,30 @@
-import React from "react";
+import React,{Component} from 'react';
 import "./cards.css";
+import data from './details.json';
 
-class Card extends React.Component {
-  render() {
-    return (
-      <div className="boxes">
-        <div className="card boxes1" style={{ width: "18rem", margin: "15px"}}>
-          <img
-            className="card-img-top"
-            src="https://vignette.wikia.nocookie.net/bungostraydogs/images/1/1e/Profile-icon-9.png/revision/latest?cb=20171030104015"
-            alt="Cardcap"
-          />
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a className="btn btn-primary" style={{ marginBottom: "10px" }}>
-              Read more
-            </a>
-          </div>
-        </div>
-        <div className="card boxes1" style={{ width: "18rem", margin: "15px" }}>
-          <img
-            className="card-img-top"
-            src="https://vignette.wikia.nocookie.net/bungostraydogs/images/1/1e/Profile-icon-9.png/revision/latest?cb=20171030104015"
-            alt="Cardcap"
-          />
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a className="btn btn-primary" style={{ marginBottom: "10px" }}>
-              Read more
-            </a>
-          </div>
-        </div>
-        <div className="card boxes1" style={{ width: "18rem", margin: "15px" }}>
-          <img
-            className="card-img-top"
-            src="https://vignette.wikia.nocookie.net/bungostraydogs/images/1/1e/Profile-icon-9.png/revision/latest?cb=20171030104015"
-            alt="Cardcap"
-          />
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a className="btn btn-primary" style={{ marginBottom: "10px" }}>
-              Read more
-            </a>
-          </div>
-        </div>
-        <div className="card boxes1" style={{ width: "18rem", margin: "15px" }}>
-          <img
-            className="card-img-top"
-            src="https://vignette.wikia.nocookie.net/bungostraydogs/images/1/1e/Profile-icon-9.png/revision/latest?cb=20171030104015"
-            alt="Cardcap"
-          />
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a className="btn btn-primary" style={{ marginBottom: "10px" }}>
-              Read more
-            </a>
-          </div>
-        </div>
-        <div className="card boxes1" style={{ width: "18rem", margin: "15px" }}>
-          <img
-            className="card-img-top"
-            src="https://vignette.wikia.nocookie.net/bungostraydogs/images/1/1e/Profile-icon-9.png/revision/latest?cb=20171030104015"
-            alt="Cardcap"
-          />
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a className="btn btn-primary" style={{ marginBottom: "10px" }}>
-              Read more
-            </a>
-          </div>
-        </div>
-        <div className="card boxes1" style={{ width: "18rem", margin: "15px" }}>
-          <img
-            className="card-img-top"
-            src="https://vignette.wikia.nocookie.net/bungostraydogs/images/1/1e/Profile-icon-9.png/revision/latest?cb=20171030104015"
-            alt="Cardcap"
-          />
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a className="btn btn-primary" style={{ marginBottom: "10px" }}>
-              Read more
-            </a>
-          </div>
-        </div>
-      </div>
-    );
-  }
+class Cards extends React.Component{
+    render(){
+        // data.map((movie,index)=>{
+        //     return <div key={index}>
+        //         <p>{movie.name}</p>
+        //         <p>{movie.Description}</p>
+        //     </div>
+        // })
+        return(
+            <div>
+               { data.map((childs,index)=>{
+                   return  <div className="card cardcss col-sm-6" style={{width:" 20rem"}} key={index}>
+                   <img className="card-img-top image" src={childs.image} alt="Card image cap" />
+                   <div className="card-block">
+                     <h4 className="card-title text">{childs.name}</h4>
+                     <p className="card-text content">{childs.Description}</p>
+                     <a href="#" className="btn btn-danger btn3">Missing child</a>
+                   </div>
+                 </div>
+                })
+               }
+            </div>
+        )
+    }
 }
-
-export default Card;
+export default Cards;
