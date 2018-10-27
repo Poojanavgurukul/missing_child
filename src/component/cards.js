@@ -1,8 +1,9 @@
-import React,{Component} from 'react';
+import React from 'react';
 import "./cards.css";
 import data from './details.json';
 
 class Cards extends React.Component{
+   
     render(){
         // data.map((movie,index)=>{
         //     return <div key={index}>
@@ -13,18 +14,21 @@ class Cards extends React.Component{
         return(
             <div>
                { data.map((childs,index)=>{
-                   return  <div className="card cardcss col-sm-6" style={{width:" 20rem"}} key={index}>
-                   <img className="card-img-top image" src={childs.image} alt="Card image cap" />
+                   return <div>  
+                   <div className="card cardcss col-sm-6" style={{width:" 20rem"}} key={index}>
+                   <img className="card-img-top image" src={childs.image} alt="Cardcap" />
                    <div className="card-block">
                      <h4 className="card-title text">{childs.name}</h4>
                      <p className="card-text content">{childs.Description}</p>
                      <a href="#" className="btn btn-danger btn3">Missing child</a>
                    </div>
                  </div>
+               </div>
                 })
                }
             </div>
         )
     }
 }
+
 export default Cards;

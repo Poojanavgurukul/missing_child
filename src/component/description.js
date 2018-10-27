@@ -42,7 +42,7 @@ class Description extends React.Component {
         style={{
           display: "flex",
           justifyContent: "center",
-          marginTop: "200px"
+          marginTop: "50px"
         }}
       >
         <form className="form-group">
